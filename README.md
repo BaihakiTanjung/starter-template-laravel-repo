@@ -12,6 +12,10 @@ php artisan migrate:fresh --seed
 
 php artisan serve
 
+## Postman 
+
+https://www.getpostman.com/collections/4a0d0e37cd00fdfe2fde
+
 ## Repo Services Packages Command
 
 https://github.com/yaza-putu/laravel-repository-with-service
