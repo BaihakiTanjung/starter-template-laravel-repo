@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\Api\ReferralController;
 
 
 /*
@@ -28,12 +27,6 @@ Route::prefix('v1')->group(function () {
     //API route for register new user
     Route::post('/register', [AuthController::class, 'register']);
 
-    // Referral
-    Route::prefix('referral')->group(function () {
-        Route::post('/register', [ReferralController::class, 'register']);
-        Route::post('/verify-otp', [ReferralController::class, 'verifyOtp']);
-    });
-    // End Referral
 
     //API route for login user
     Route::post('/login', [AuthController::class, 'login']);

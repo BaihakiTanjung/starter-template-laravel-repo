@@ -9,7 +9,7 @@ namespace App\Helpers;
 class Constants
 {
     const FCM_KEY = "key=AAAAkGaY0cY:APA91bFF0fvzzhkpo_jJw5i8mLtBdvUdICMoGGRUp4RIwYpKDcOIehJt7V4dVW9Ll8P58FCyynZ5376mljSD9fz5J2fYAb4hiNMav5VSmz9pNhwdt-RNmXi70MNn8pQOd6X7SOhEAHv";
-    const APP_NAME = "PICKERS";
+    const APP_NAME = "STARTER";
     const IMAGE_FORMAT_PNG = "png";
     const SYSTEM = "System";
     const ACTIVE = true;

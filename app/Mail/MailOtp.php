@@ -28,7 +28,7 @@ class MailOtp extends Mailable
      */
     public function build()
     {
-        return $this->subject('Otp Agreesip')
+        return $this->subject('Otp')
             ->view('emails.otp')->with('data', $this->data);
     }
 }

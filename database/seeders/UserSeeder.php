@@ -54,7 +54,6 @@ class UserSeeder extends Seeder
         for ($i = 1; $i <= 40; $i++) {
 
             User::create([
-                'referral_code' => $faker->regexify('[A-Z]{5}[0-4]{3}'),
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'role' => 'member',

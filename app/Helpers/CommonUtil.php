@@ -138,44 +138,44 @@ class CommonUtil
 
     public static function sendSms($noTelp, $textSms = "default", $desc = "Agreesip")
     {
-        // Send sms gateway
-        $curltoken = curl_init();
-        $data = array('Username' => env('GM_USER', ''), 'password' => env('GM_PASS', ''));
-        curl_setopt($curltoken, CURLOPT_URL, 'https://smsgw.sitama.co.id/api/oauth/token');
-        curl_setopt($curltoken, CURLOPT_POST, 1);
-        curl_setopt($curltoken, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($curltoken, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curltoken, CURLOPT_SSL_VERIFYPEER, false);
-        $result = curl_exec($curltoken);
-        curl_close($curltoken);
+        // // Send sms gateway
+        // $curltoken = curl_init();
+        // $data = array('Username' => env('GM_USER', ''), 'password' => env('GM_PASS', ''));
+        // curl_setopt($curltoken, CURLOPT_URL, 'https://smsgw.sitama.co.id/api/oauth/token');
+        // curl_setopt($curltoken, CURLOPT_POST, 1);
+        // curl_setopt($curltoken, CURLOPT_POSTFIELDS, $data);
+        // curl_setopt($curltoken, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($curltoken, CURLOPT_SSL_VERIFYPEER, false);
+        // $result = curl_exec($curltoken);
+        // curl_close($curltoken);
 
-        $tokenbearer = json_decode($result, true)['access_token'];
+        // $tokenbearer = json_decode($result, true)['access_token'];
 
-        $curl = curl_init();
+        // $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://smsgw.sitama.co.id/api/SMS/smssitama',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => '{
-                                          "notelp": "' . $noTelp . '",
-                                          "textsms": "' . $textSms . '",
-                                          "desc": "' . $desc . '"
-                                      }',
-            CURLOPT_HTTPHEADER => array(
-                'Authorization: Bearer ' . $tokenbearer,
-                'Content-Type: text/plain'
-            ),
-        ));
+        // curl_setopt_array($curl, array(
+        //     CURLOPT_URL => 'https://smsgw.sitama.co.id/api/SMS/smssitama',
+        //     CURLOPT_RETURNTRANSFER => true,
+        //     CURLOPT_ENCODING => '',
+        //     CURLOPT_MAXREDIRS => 10,
+        //     CURLOPT_TIMEOUT => 0,
+        //     CURLOPT_FOLLOWLOCATION => true,
+        //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //     CURLOPT_CUSTOMREQUEST => 'POST',
+        //     CURLOPT_POSTFIELDS => '{
+        //                                   "notelp": "' . $noTelp . '",
+        //                                   "textsms": "' . $textSms . '",
+        //                                   "desc": "' . $desc . '"
+        //                               }',
+        //     CURLOPT_HTTPHEADER => array(
+        //         'Authorization: Bearer ' . $tokenbearer,
+        //         'Content-Type: text/plain'
+        //     ),
+        // ));
 
-        $response = curl_exec($curl);
+        // $response = curl_exec($curl);
 
-        curl_close($curl);
+        // curl_close($curl);
 
         return $response;
     }
