@@ -2,6 +2,9 @@
 
 Starter Laravel 9 dengan setup repo services dan migration user authentication.
 
+required:
+php 8
+
 ## COMMAND
 
 composer install
@@ -11,6 +14,15 @@ change env to your
 php artisan migrate:fresh --seed
 
 php artisan serve
+
+*turn on job
+php artisan queue:listen 
+
+# Feature
+Auth system
+Email with job
+RestFull Api
+Postman 
 
 ## Postman 
 

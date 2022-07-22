@@ -134,50 +134,12 @@ class CommonUtil
         return mt_rand(100000, 999999);
     }
 
-
-
     public static function sendSms($noTelp, $textSms = "default", $desc = "Agreesip")
     {
         // // Send sms gateway
-        // $curltoken = curl_init();
-        // $data = array('Username' => env('GM_USER', ''), 'password' => env('GM_PASS', ''));
-        // curl_setopt($curltoken, CURLOPT_URL, 'https://smsgw.sitama.co.id/api/oauth/token');
-        // curl_setopt($curltoken, CURLOPT_POST, 1);
-        // curl_setopt($curltoken, CURLOPT_POSTFIELDS, $data);
-        // curl_setopt($curltoken, CURLOPT_RETURNTRANSFER, true);
-        // curl_setopt($curltoken, CURLOPT_SSL_VERIFYPEER, false);
-        // $result = curl_exec($curltoken);
-        // curl_close($curltoken);
+        //isi dengan gateway sendiri
 
-        // $tokenbearer = json_decode($result, true)['access_token'];
-
-        // $curl = curl_init();
-
-        // curl_setopt_array($curl, array(
-        //     CURLOPT_URL => 'https://smsgw.sitama.co.id/api/SMS/smssitama',
-        //     CURLOPT_RETURNTRANSFER => true,
-        //     CURLOPT_ENCODING => '',
-        //     CURLOPT_MAXREDIRS => 10,
-        //     CURLOPT_TIMEOUT => 0,
-        //     CURLOPT_FOLLOWLOCATION => true,
-        //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //     CURLOPT_CUSTOMREQUEST => 'POST',
-        //     CURLOPT_POSTFIELDS => '{
-        //                                   "notelp": "' . $noTelp . '",
-        //                                   "textsms": "' . $textSms . '",
-        //                                   "desc": "' . $desc . '"
-        //                               }',
-        //     CURLOPT_HTTPHEADER => array(
-        //         'Authorization: Bearer ' . $tokenbearer,
-        //         'Content-Type: text/plain'
-        //     ),
-        // ));
-
-        // $response = curl_exec($curl);
-
-        // curl_close($curl);
-
-        return $response;
+        // return $response;
     }
 
     public static function generateOtp($indentifier, $length = 6, $minutes = 5)
