@@ -9,7 +9,7 @@ php 8
 
 composer install or composer update
 
-change env to your
+change env to your settings
 
 php artisan migrate:fresh --seed
 
