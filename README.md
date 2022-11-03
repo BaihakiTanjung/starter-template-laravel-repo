@@ -7,7 +7,7 @@ php 8
 
 ## COMMAND
 
-composer install
+composer install or composer update
 
 change env to your
 
